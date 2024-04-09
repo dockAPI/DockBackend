@@ -18,6 +18,9 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String token = request.getHeader("Authorization");
+        if( request.getRequestURI().contains("/public/")) {
+            return true;
+        }
         if (token != null && gitHubApiService.isValidGitHubToken(token)) {
             return true; // Proceed with the request
         } else {
