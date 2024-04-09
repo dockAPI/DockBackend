@@ -1,0 +1,7 @@
+get controller for each user by user's github id    ----------done----------
+githubid, email in modals             ----------done----------
+post api update cause of controller   --------done-----------
+
+readme update   --------------done----------------
+and ui   --------------in progress-----------------
+
